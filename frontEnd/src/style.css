@@ -1,0 +1,172 @@
+@font-face {
+    font-family: "pixel";
+    src: url(font/kongtext.ttf);
+}
+
+* {
+    font-family: "pixel";
+    color: white;    
+}
+
+body {
+    background-image: url("img/background_plaine.jpg");
+    background-size: cover;
+    height: 100vh;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    min-height: 100vh;
+}
+
+h2, label{
+    text-shadow: 0 0 5px black ;
+}
+/*
+*   SECTION 
+*/
+.allies,
+.enemy {
+    margin-left: 60px;
+    margin-right: 60px;
+    min-height: 500px;
+    max-width: 35%;
+    justify-content: center;
+}
+
+.allies {
+    align-content: flex-start;
+}
+
+section {
+    min-height: 500px;
+    max-height: 500px;
+    max-width: 35%;
+    display: grid;
+    align-content: center;
+}
+
+article {
+    display: block;
+    text-align: center;
+}
+
+.allies img,
+.enemy img {
+    min-width: 250px;
+    max-width: 250px;
+    min-height: 250px;
+    max-height: 250px;
+    object-fit: contain;
+}
+
+.turn-arrow {
+    height: 250px;
+    align-content: start;
+}
+
+.turn-arrow img {
+    width: 175px;
+    height: 175px;
+    transition: all 1s ease-out;
+}
+
+.enemy-turn {
+    transform: rotate(-6367deg);
+}
+.quick-enemy-turn{
+    transform: rotate(-3470deg);
+}
+
+.allies-turn {
+    transform: rotate(-3350deg);
+}
+.quick-allies-turn{
+    transform: rotate(230deg);
+}
+
+.disable {
+    display: none !important;
+}
+/*
+history
+*/
+.history{
+    height: 80px;
+    align-self: flex-start;
+    display:flex;
+    justify-content: start;
+    position: fixed;
+    max-width: 100vh;
+    left: 1%;
+}
+.dead-enemy{
+    object-fit: contain;
+    width: 60px;
+    filter: sepia(100%)
+}
+/*
+Framework modif
+*/
+.nes-progress {
+    width: 60%;
+    height: 18px;
+}
+
+.nes-container {
+    position: absolute !important;
+    width: 30vw;
+    top: 20%;
+    left: 35vw;
+    word-wrap: anywhere;
+}
+
+.overlay {
+    height: 100vh;
+    width: 100vw;
+    background-image: url("img/background_arcade.png");
+    background-size: 200vw 150vh;
+    background-position: center;
+}
+
+.zoom-in {
+    animation-name: zoom-in;
+    animation-duration: 1000ms;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+}
+
+.zoom-out {
+    animation-name: zoom-out;
+    animation-duration: 1000ms;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+}
+
+@keyframes zoom-in {
+    from {
+        background-size: 200vw 150vh;
+    }
+    to {
+        background-size: 500vw 450vh;
+    }
+}
+
+@keyframes zoom-out {
+    from {
+        background-size: 500vw 450vh;
+    }
+    to {
+        background-size: 200vw 150vh;
+    }
+}
+
+
+
+@media screen and (min-width: 1500px) {
+    body {
+        background-size: contain;
+    }
+}

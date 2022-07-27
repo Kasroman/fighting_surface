@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link type="text/css" rel="stylesheet" href="./node_modules/nes.css/css/nes.min.css">
+    <link type="text/css" rel="stylesheet" href="style.css">
+    <title>Fighting surface</title>
+
+    
+    <script type="module" src="main.js" defer></script>
+</head>
+
+<body class="nes-pointer">
+   
+    <div class="overlay"></div>
+
+    <article class="nes-container with-title is-centered is-dark">
+        <p class="title">Status</p>
+        <p class="status-bar">Bienvenue dans Fighting Surface</p>
+    </article>
+
+    <div class="menu absolute top-[35vh] w-[100%] flex justify-center"></div>
+
+    <div class="game">
+
+        <main>
+            <article class="history">
+                    <!-- <img src="img/barzork_bourrin.png" alt="" class="dead-enemy"> -->
+
+            </article>
+            <section class="allies">
+
+
+
+                <article class="action">
+                    <button type="button" class="nes-btn is-disabled  attack-js">Attack</button>
+                    <!-- Doit être gris par default une fois 5 attaque si le combat est encore ok alors il est activé-->
+                    <button type="button" class="nes-btn is-disabled special-js">Special</button> 
+                </article>
+                <article>
+                    <h2 class="allies-pp"></h2>
+                    <img src="img/fighter.png" alt="">
+                </article>
+                <article class="life-bar">
+                    <label for="allies-bar">Point de vie</label>
+                    <progress class="nes-progress is-success" id="allies-bar" max="100" value="70"> 70% </progress>
+                </article>
+            </section>
+            <section class="turn-arrow">
+                <img src="img/arrow.png" alt="">
+            </section>
+            <section class="enemy">
+                <article>
+                    <button type="button" class="nes-btn is-warning enemies-generator ">Genere un adversaire</button>
+                </article>
+                <div id="enemy-div">
+                    <article class="disable">
+                        <h2 class="enemy-title"></h2>
+                        <img src="" alt="" class="enemy-pp">
+                    </article>
+                    <article class="life-bar disable">
+                        <label for="enemy-bar">Point de vie</label>
+                        <progress class="nes-progress is-success" id="enemy-bar" max="100" value="70"><p>70%</p>  </progress>
+                    </article>
+                </div>
+
+            </section>
+        </main>
+    </div>
+    
+</body>
+
+</html>
